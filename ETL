@@ -1,0 +1,10 @@
+Import pandas as pd;
+
+Account= pd.read_csv('account.csv')
+person=  pd.read_csv(person.csv')
+transaction= pd.read_csv('transaction.csv')
+
+for I in account:
+	account_id= id_Account
+	type= account_type
+	cursor.execute( “INSERT INTO enote.account (ID, type) VALUES (%s%s)”, account_id, type)
