@@ -1,0 +1,48 @@
+CREATE TABLE enote.user(
+    ID INT PRIMARY KEY,
+    FirstName varchar(255),
+    LastName varchar(255),
+    Birthdate date,
+    Email varchar(255),
+    Phone, 
+    Zip,
+    Address varchar(255),
+    City varchar(255)
+);
+
+
+CREATE TABLE enote.Account(
+    ID INT PRIMARY KEY,
+    Type varchar(255),
+    Created_at date,
+    
+);
+
+CREATE TABLE enote.Transaction(
+    ID INT PRIMARY KEY,
+    Type varchar(255),
+    Created_at date,
+    
+);
+
+
+CREATE TABLE enote.user_account(
+    ID INT PRIMARY KEY,
+    User_id INT FOREIGN KEY,
+    account_id FOREIGN KEY,
+    account_Type varchar(255),
+    created_at date,
+    
+);
+
+
+CREATE TABLE enote.Transaction_log(
+    ID INT PRIMARY KEY,
+    transaction_id INT,
+    account_id FOREIGN KEY,
+    transaction_Type varchar(255),
+    transaction_date date,
+    created_at date
+    
+);
+
